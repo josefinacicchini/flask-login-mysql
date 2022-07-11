@@ -19,7 +19,7 @@ def login():
         print(request.form['password'])
         return render_template('auth/login.html')
     else:
-    return render_template('auth/login.html')
+        return render_template('auth/login.html')
 
 
 if __name__ == '__main__':
