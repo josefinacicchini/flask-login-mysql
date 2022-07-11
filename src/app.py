@@ -2,8 +2,11 @@ from crypt import methods
 from curses import flash
 from flask import Flask, render_template, request, redirect, url_for
 from config import config
+from flaskext.mysql import MySQL
 
 app = Flask(__name__, template_folder='template')
+
+db = MySQL(app)
 
 @app.route('/')
 def index():
