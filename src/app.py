@@ -17,7 +17,7 @@ db = MySQL(app)
 def index():
     return redirect(url_for('login'))
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method =='POST':
         # print(request.form['username'])
