@@ -4,10 +4,12 @@ class Config():
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    MYSQL_HOST = 'localhost'
-    MYSQL_USER = 'root'
-    MYSQL_PASSWORD = 'root'
-    MYSQL_DB = 'madretierra/users'
+    MYSQL_DATABASE_HOST ='localhost'
+    MYSQL_DATABASE_USER ='root'
+    MYSQL_DATABASE_PASSWORD ='root'
+    MYSQL_DATABASE_DB ='madretierra'
+    
+
 
 config = {
     'development': DevelopmentConfig

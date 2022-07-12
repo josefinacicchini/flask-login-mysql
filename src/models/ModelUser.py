@@ -4,7 +4,8 @@ class ModelUser():
     @classmethod
     def login(self,db,user):
         try:
-            cursor = db.connection.cursor()
+            conn = db.connect()
+            cursor =conn.cursor()
             sql = """SELECT id, username, password, fullname FROM users WHERE username = '{}'""".format(user.username)
             cursor.execute(sql)
             row = cursor.fetchone()
